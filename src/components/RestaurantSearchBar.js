@@ -1,18 +1,17 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, TextInput } from 'react-native'
 
 import styles from '../styles'
-import { TextInput } from 'react-native-gesture-handler'
 
-const SearchBar = (props) => {
+const RestaurantSearchBar = (props) => {
     return(
         <View style={styles.components.searchBar.container}>
             <TextInput
                 onChangeText={props.onSearch}
-                placeholder="Şehir arayınız..."
+                placeholder="Restoran arayınız..."
                 placeholderTextColor="white"
             />
         </View>
     )
 }
-export {SearchBar}
+export {RestaurantSearchBar}

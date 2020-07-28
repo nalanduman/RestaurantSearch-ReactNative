@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { CitiesPage, RestaurantsPage } from './pages';
+import { CitiesPage, RestaurantsPage, RestaurantDetailPage } from './pages';
 
 const Stack = createStackNavigator();
 
@@ -22,8 +22,15 @@ const Router = (props) => {
             name="Restaurants"
             component={RestaurantsPage}
             options={{
-              title: "Restoran Listesi"
-              
+              title: "Restoran Listesi"              
+            }}
+        />
+
+        <Stack.Screen
+            name="Detail"
+            component={RestaurantDetailPage}
+            options={{
+              title: "Restoran Detayı"              
             }}
         />
       </Stack.Navigator>

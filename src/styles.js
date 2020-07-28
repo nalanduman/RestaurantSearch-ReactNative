@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 const styles = {
     components: {
@@ -20,13 +20,20 @@ const styles = {
 
         restaurantItem: StyleSheet.create({
             container: {
-                padding: 10,
+                padding: 5,
                 justifyContent: 'center',
                 alignItems: 'center'
             },
 
             text: {
-                fontSize: 20
+                fontSize: 20,
+                color: '#FF5722'
+            },
+
+            image: {
+                borderRadius: 10,
+                resizeMode: 'contain',
+                height: Dimensions.get('window').height/4
             }
         }),
 
@@ -58,8 +65,9 @@ const styles = {
             },
 
             cityText: {
-                padding: 25,
-                fontWeight: 'bold'
+                padding: 15,
+                fontWeight: 'bold',
+                alignSelf: 'center'
             }
         })
     }

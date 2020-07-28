@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, Text, FlatList, ActivityIndicator } from 'react-native'
 import axios from 'axios';
 
-import { CityCard, SearchBar } from '../components';
+import { CityCard, CitySearchBar } from '../components';
 
 const CitiesPage = (props) => {
 
@@ -19,7 +19,7 @@ const CitiesPage = (props) => {
         setFiltCityList(data.cities)
         setCityList(data.cities)
         setLoading(false)
-        console.log(data)
+        // console.log(data)
     }
 
     const renderCity = ({item}) => {
@@ -32,13 +32,13 @@ const CitiesPage = (props) => {
     }
 
     function citySelect(city) {
-        props.navigation.navigate("Restaurants", {cityID: city.id})
+        props.navigation.navigate("Restaurants", {cityID: city})
     }
 
-    // toUpperCase: aramayı küçük yada büyük harfle yapabilsin diye
+    // toUpperCase: aramayı küçük yada büyük harfle yapabilesin diye
     const searchCity = (text) => {
         let filteredList = cityList.filter(function(item) {
-            const itemData = item.cities.toUpperCase()
+            const itemData = item.toUpperCase()
             const textData = text.toUpperCase()
             return itemData.indexOf(textData) > -1
         })
@@ -49,7 +49,7 @@ const CitiesPage = (props) => {
         <SafeAreaView style={{flex: 1}}>
             <View style={{flex: 1}}>
 
-                <SearchBar onSearch={searchCity}/>
+                <CitySearchBar onSearch={searchCity}/>
                 
                 {
                     loading ?
