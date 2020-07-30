@@ -44,6 +44,38 @@ const styles = {
                 padding: 1,
                 borderRadius: 10
             }
+        }),
+        detailItem: StyleSheet.create({
+            container: {
+                padding: 5,
+                justifyContent: 'center',
+                alignItems: 'center'
+            },
+            image: {
+                borderRadius: 10,
+                resizeMode: 'contain',
+                height: Dimensions.get('window').height/3
+            },
+            detail: {
+                color: 'black',
+                margin: 5,
+                padding: 10,
+                borderRadius: 10,
+                alignItems: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+            },
+            detailName: {
+                color: '#FF5722',
+                fontSize: 20,
+                fontWeight: 'bold',
+                margin: 5,
+                padding: 10,
+                borderRadius: 10,
+                alignItems: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+            }
         })
     },
 

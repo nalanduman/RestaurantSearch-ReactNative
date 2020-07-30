@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, Text, FlatList } from 'react-native'
 import axios from 'axios'
 
-import { RestaurantsItem, RestaurantSearchBar } from '../components'
+import { RestaurantsItem, SearchBar } from '../components'
 import styles from '../styles'
 
 const RestaurantsPage = (props) => {
@@ -53,7 +53,7 @@ const RestaurantsPage = (props) => {
                     <Text style={styles.pages.restaurantList.cityText}>{props.route.params.cityID} Restoranları</Text>
                 </View>
                 
-                <RestaurantSearchBar onSearch={searchRestaurant} />
+                <SearchBar onSearch={searchRestaurant} place="Restoran arayınız..."/>
 
                 <FlatList 
                     refreshing={loading}
@@ -63,6 +63,7 @@ const RestaurantsPage = (props) => {
                     renderItem={renderRestaurants}
                     ItemSeparatorComponent={() => <View style={{marginVertical: 5, borderWidth: 1, borderColor: '#FF5722'}} />}
                 />
+
             </View>
         </SafeAreaView>
     )

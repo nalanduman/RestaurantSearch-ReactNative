@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, Text, FlatList, ActivityIndicator } from 'react-native'
 import axios from 'axios';
 
-import { CityCard, CitySearchBar } from '../components';
+import { CityCard, SearchBar } from '../components';
 
 const CitiesPage = (props) => {
 
@@ -49,7 +49,7 @@ const CitiesPage = (props) => {
         <SafeAreaView style={{flex: 1}}>
             <View style={{flex: 1}}>
 
-                <CitySearchBar onSearch={searchCity}/>
+                <SearchBar onSearch={searchCity} place="Şehir arayınız..."/>
                 
                 {
                     loading ?

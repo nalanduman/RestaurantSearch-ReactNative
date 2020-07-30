@@ -3,15 +3,15 @@ import { View, TextInput } from 'react-native'
 
 import styles from '../styles'
 
-const RestaurantSearchBar = (props) => {
+const SearchBar = (props) => {
     return(
         <View style={styles.components.searchBar.container}>
             <TextInput
                 onChangeText={props.onSearch}
-                placeholder="Restoran arayınız..."
+                placeholder={props.place}
                 placeholderTextColor="white"
             />
         </View>
     )
 }
-export {RestaurantSearchBar}
+export {SearchBar}
