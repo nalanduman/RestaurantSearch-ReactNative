@@ -46,8 +46,8 @@ const RestaurantsPage = (props) => {
     }
 
     return(
-        <SafeAreaView>
-            <View>
+        <SafeAreaView style={{ flex: 1 }}> 
+            <View style={{ flex: 1 }}>
 
                 <View style={styles.pages.restaurantList.cityContainer}>
                     <Text style={styles.pages.restaurantList.cityText}>{props.route.params.cityID} Restoranları</Text>

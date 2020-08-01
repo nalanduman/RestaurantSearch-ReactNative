@@ -16,10 +16,10 @@ const RestaurantDetailPage = (props) => {
         let {data} = await axios.get("https://opentable.herokuapp.com/api/restaurants/" + props.route.params.restaurantID)
         setList(data)
     }
-    
+
     return(
-        <SafeAreaView>
-            <View>
+        <SafeAreaView style={{ flex: 1 }}>
+            <View style={{ flex: 1 }}>
 
                 <DetailItem detailData={list}/>
 

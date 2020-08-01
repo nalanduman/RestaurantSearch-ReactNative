@@ -53,8 +53,8 @@ const styles = {
             },
             image: {
                 borderRadius: 10,
-                resizeMode: 'contain',
-                height: Dimensions.get('window').height/3
+                height: Dimensions.get('window').height/4,
+                resizeMode: 'contain'
             },
             detail: {
                 color: 'black',
